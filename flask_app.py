@@ -29,6 +29,10 @@ logging.basicConfig(level=logging.INFO)
 # то мы уберем одну подсказку. Как будто что-то меняется :)
 sessionStorage = {}
 
+@app.route("/")
+def index():
+    return "Привет от приложения Flask"
+
 
 @app.route('/post', methods=['POST'])
 # Функция получает тело запроса и возвращает ответ.
